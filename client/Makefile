@@ -1,4 +1,4 @@
-# github.com/winwisely99/catalogue/client
+
 
 LIB_NAME=catalogue
 LIB=github.com/winwisely99/$(LIB_NAME)
@@ -7,11 +7,14 @@ LIB_FSPATH=$(GOPATH)/src/$(LIB)
 
 GO111MODULE=on
 
+SAMPLE_NAME=flutter_catalog
+#SAMPLE_NAME=simple
+#SAMPLE_FSPATH=$(LIB_FSPATH)/client/$(SAMPLE_NAME)
 
-SAMPLE_NAME=simple
-SAMPLE_FSPATH=$(LIB_FSPATH)/client/$(SAMPLE_NAME)
 
-help:  ## Display this help
+SAMPLE_FSPATH=$(PWD)/$(SAMPLE_NAME)
+
+help:  ## Display this helsp
 	@awk 'BEGIN {FS = ":.*##"; printf "\nUsage:\n  make \033[36m<target>\033[0m\n"} /^[a-zA-Z_-]+:.*?##/ { printf "  \033[36m%-15s\033[0m %s\n", $$1, $$2 } /^##@/ { printf "\n\033[1m%s\033[0m\n", substr($$0, 5) } ' $(MAKEFILE_LIST)
 
 
