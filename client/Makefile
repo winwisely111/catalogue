@@ -1,13 +1,13 @@
 
 
-LIB_NAME=catalogue
+LIB_NAME=flutter_catalogue
 LIB=github.com/winwisely99/$(LIB_NAME)
 LIB_BRANCH=master
 LIB_FSPATH=$(GOPATH)/src/$(LIB)
 
 GO111MODULE=on
 
-SAMPLE_NAME=flutter_catalog
+SAMPLE_NAME=simple
 #SAMPLE_NAME=simple
 #SAMPLE_FSPATH=$(LIB_FSPATH)/client/$(SAMPLE_NAME)
 
@@ -31,7 +31,9 @@ print: ## print
 	@echo SAMPLE_FSPATH: $(SAMPLE_FSPATH)
 	@echo
 
-
+import:
+	# copy flutter_catalogue in for close reference. Its a hack but ok for now.
+	cp -r $(LIB_FSPATH) orig
 
 os-dep:
 	# Assume hover make file has ben run 
