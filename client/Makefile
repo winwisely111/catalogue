@@ -1,17 +1,10 @@
 
+# Ref: https://github.com/X-Wei/flutter_catalog
 
-LIB_NAME=flutter_catalogue
-LIB=github.com/winwisely99/$(LIB_NAME)
-LIB_BRANCH=master
-LIB_FSPATH=$(GOPATH)/src/$(LIB)
 
 GO111MODULE=on
 
-SAMPLE_NAME=simple
-#SAMPLE_NAME=simple
-#SAMPLE_FSPATH=$(LIB_FSPATH)/client/$(SAMPLE_NAME)
-
-
+SAMPLE_NAME=
 SAMPLE_FSPATH=$(PWD)/$(SAMPLE_NAME)
 
 help:  ## Display this helsp
@@ -19,12 +12,6 @@ help:  ## Display this helsp
 
 
 print: ## print
-	@echo
-	@echo LIB_NAME: $(LIB_NAME)
-	@echo LIB: $(LIB)
-	@echo LIB_BRANCH: $(LIB_BRANCH)
-	@echo LIB_FSPATH: $(LIB_FSPATH)
-	@echo
 
 	@echo
 	@echo SAMPLE_NAME: $(SAMPLE_NAME)
@@ -33,7 +20,8 @@ print: ## print
 
 import:
 	# copy flutter_catalogue in for close reference. Its a hack but ok for now.
-	cp -r $(LIB_FSPATH) orig
+	mkdir orig
+	#cp -r $(LIB_FSPATH) orig
 
 os-dep:
 	# Assume hover make file has ben run 

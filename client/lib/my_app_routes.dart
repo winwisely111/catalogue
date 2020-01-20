@@ -125,7 +125,6 @@ const kMyAppRoutesBasic = <MyRouteGroup>[
     icon: Icon(Icons.extension),
     routes: <MyRoute>[
 
-      
       MyRoute(
         child: IconExample(),
         sourceFilePath: 'lib/routes/widgets_icon_ex.dart',
